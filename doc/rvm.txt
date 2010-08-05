@@ -1,0 +1,42 @@
+*rvm.txt*  A RVM wrapper for Vim
+
+Author:  Susan Potter <meNOSPAM@susanpotter.net>         *rvm-author*
+License: Same terms as Vim itself (see |license|)
+
+This plugin is only available if 'compatible' is not set.
+
+INTRODUCTION                                    *rvm*
+
+Install in ${HOME}/.vim on *NIX, or in ${HOME}\vimfiles if you're on Windows.
+Vim 7.2 is recommended as it ships with syntax highlighting for many Git file
+types.
+
+COMMANDS                                        *rvm-commands*
+
+These commands are local to the buffers in which they work (buffers that are 
+part of an RVM project or Ruby files).
+
+                                                *rvm-:Rvm*
+:Rvm [args]             Run an arbitrary RVM command. Similar to :!rvm [args]
+
+                                                *rvm-:RvmList*
+:RvmList                Bring up the output of |:!rvm list| in the preview
+                        window.  Press I to |:RvmInstall| the Ruby version on 
+                        the cursor line (this may take some time).  
+
+MAPPINGS                                        *rvm-mappings*
+
+STATUSLINE                                      *rvm-statusline*
+
+                                                *rvm#statusline()*
+Add %{rvm#statusline()} to your statusline to get an indicator of the Ruby 
+version being used for the project or currently in use version if no .rvmrc 
+file exists for the project. 
+
+ABOUT                                           *rvm-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/rvm/vim-rvm
+
+ vim:tw=78:et:ft=help:norl:
